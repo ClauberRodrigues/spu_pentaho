@@ -1,0 +1,82 @@
+1.2.0           2014-01-09
+--------------------------
+
+- Modificado a carga para contemplar o carregamento automático de todas 
+  as bases de dados utilizados para o BI. 
+
+- Carga a ser executada  diariamente.
+
+- A carga faz o controle de qual arquivo necessário para carga esta faltando 
+  e solicita o reenvio. 
+
+- Verifica qual base não foi carregada no mês em que está sendo executado a carga, 
+  e caso haja um processo do dia anterior esteja em execução um novo não é executado.
+
+- Deverá ser criado o schema etl e as tabelas necessárias abaixo:
+
+	  CREATE SCHEMA etl
+	  AUTHORIZATION bispu;
+	  GRANT ALL ON SCHEMA etl TO bispu;
+	  GRANT USAGE ON SCHEMA etl TO "EXTERNO_SPU";
+	  GRANT USAGE ON SCHEMA etl TO "SELECT_GROUP";
+
+	  CREATE TABLE etl.arquivos_restauracao_bases (
+		  nome character varying(30) NOT NULL,
+		  data_restauracao timestamp without time zone NOT NULL DEFAULT now(),
+		  arquivo_utilizado character varying(100) NOT NULL,
+		  restaurado_arquivo boolean NOT NULL
+	  )
+	  WITH ( OIDS=FALSE);
+	  ALTER TABLE etl.arquivos_restauracao_bases OWNER TO bispu;
+	  GRANT ALL ON TABLE etl.arquivos_restauracao_bases TO bispu;
+	  GRANT SELECT ON TABLE etl.arquivos_restauracao_bases TO "SELECT_GROUP";
+
+	  CREATE TABLE etl.bases_restauradas (
+		  nome character varying(30) NOT NULL,
+		  data_restauracao timestamp without time zone NOT NULL DEFAULT now(),
+		  arquivo_utilizado character varying(100) NOT NULL,
+		  base_restaurada boolean NOT NULL
+	  ) WITH (OIDS=FALSE);
+	  ALTER TABLE etl.bases_restauradas OWNER TO bispu;
+	  GRANT ALL ON TABLE etl.bases_restauradas TO bispu;
+	  GRANT SELECT ON TABLE etl.bases_restauradas TO "SELECT_GROUP";
+
+	  CREATE TABLE etl.cargabases (
+		  id_job integer,
+		  jobname character varying(255),
+		  status character varying(15),
+		  errors bigint,
+		  startdate timestamp without time zone,
+		  enddate timestamp without time zone,
+		  logdate timestamp without time zone,
+		  depdate timestamp without time zone,
+		  replaydate timestamp without time zone,
+		  log_field text
+ 	  ) WITH (OIDS=FALSE);
+	  ALTER TABLE etl.cargabases OWNER TO bispu;
+
+ 	  CREATE TABLE etl.data_recebimento_bases (
+	  nome character varying(30) NOT NULL,
+	  dia_recebimento character varying(2) NOT NULL,
+	  ativo boolean NOT NULL
+	  ) WITH (OIDS=FALSE);
+	  ALTER TABLE etl.data_recebimento_bases OWNER TO bispu;
+	  GRANT ALL ON TABLE etl.data_recebimento_bases TO bispu;
+	  GRANT SELECT ON TABLE etl.data_recebimento_bases TO "SELECT_GROUP";
+
+- Deverá ser instalado em cada máquina Windows Server 2003, onde são carregados as 
+  bases do SPIUnet e CIF o Pentaho Data Integration e ser executado o 
+  Carte.bat 0.0.0.0:8181. Isso fará com que os jobs de carga do CIF e SPIUnet, possam
+  ser executados remotamente.
+
+1.1.0           2013-10-20
+--------------------------
+
+- Adicionado novos ktrs: DARF Arrecadacao e Emissao
+
+
+1.0.0		2013-01-31
+--------------------------
+- Importação inicial para controle de versões.
+
+
