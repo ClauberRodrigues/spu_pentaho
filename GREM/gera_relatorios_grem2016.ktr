@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>gera_relatorios_grem2016</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>SERVIDOR</name>
+            <default_value>10.209.9.236</default_value>
+            <description/>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2012&#x2f;12&#x2f;06 09&#x3a;41&#x3a;35.952</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2012&#x2f;12&#x2f;06 09&#x3a;41&#x3a;35.952</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>oltp</name>
+    <server>&#x24;&#x7b;SERVIDOR&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>oltp</database>
+    <port>5432</port>
+    <username>oltp</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa2fa060d3c6a69b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>planilha_z4</from><to>Microsoft Excel Output</to><enabled>N</enabled> </hop>
+  <hop> <from>Planilha_7B</from><to>s_planilha_7b</to><enabled>N</enabled> </hop>
+  <hop> <from>Anal&#xed;tico 3M</from><to>Text file output</to><enabled>N</enabled> </hop>
+  <hop> <from>Sintetico 3L</from><to>3L</to><enabled>N</enabled> </hop>
+  <hop> <from>Sint&#xe9;tico 3M</from><to>3M</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>3L</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#x2f;home&#x2f;clauber&#x2f;GrandeEmissao2016&#x2f;Relatorios&#x2f;PREV_9999_2016043LXD_RelacaodeImoveisComDebitosNaoGerados</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sintetico</sheetname>
+      <autosizecolums>Y</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>uf</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>dados</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>ERRO DE CALCULO</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>RESP INVALIDO OU NAO CADASTRADO</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSP LANC - EMENDA CONSTITUCIONAL 46</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSP LANC - INCONSISTENCIA CADASTRAL</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSP LANC - ISENCAO TAXA - ORGAO ISENTO</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSP LANC - REGULARIZACAO FUNDIARIA</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSP LANC - OUTROS MOTIVOS</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>total</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>3M</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#x2f;home&#x2f;clauber&#x2f;GrandeEmissao2016&#x2f;Relatorios&#x2f;PREV_9999_2016043MXD_RelacaoDeImoveisComDebitosNaoCobrados</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>Y</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>uf</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>dados</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>CARENTE</name>
+        <type>BigNumber</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;&#x23;</format>
+      </field>
+      <field>
+        <name>ERRO DE ENDERECAMENTO</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>ISENTO</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>VALOR &#x3c; R&#x24; 10,00</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>SUSPENSAO DE COBRANCA</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>total</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>Y</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Anal&#xed;tico 3M</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>oltp</connection>
+    <sql>SELECT spu &#x22;SPU&#x22;,&#xa;       uf &#x22;UF&#x22;, &#xa;       municipio &#x22;Munic&#xed;pio&#x22;,&#xa;       nu_rip &#x22;Nr. RIP&#x22;,&#xa;       nu_utilizacao &#x22;Nr. Utiliza&#xe7;&#xe3;o&#x22;,&#xa;       cd_receita &#x22;Cd. Receita&#x22;,&#xa;       cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100 &#x22;Vlr. D&#xe9;bito&#x22;,&#xa;       cd_motivo_nao_geracao &#x22;Cd. Motivo N&#xe3;o Gera&#xe7;&#xe3;o&#x22;,  &#xa;       tx_explicacao_nao_geracao,&#xa;       cpf_cgc, nome&#xa;  FROM grem.planilha_3k&#xa; WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#x27;ISENTO&#x27;, &#x27;CARENTE&#x27;, &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;, &#x27;ERRO DE ENDERECAMENTO&#x27;,&#x27;SUSPENSAO DE COBRANCA&#x27;&#x29;&#x3b;&#xa;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Microsoft Excel Output</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#x2f;home&#x2f;clauber&#x2f;GrandeEmissao2016&#x2f;Relatorios&#x2f;PREV_9999_201603Z4XD_ResumoGeralDaGrandeEmissao</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>Unidade da Federa&#xe7;&#xe3;o</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>SPU</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>Qt DARF Postados</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Qt DARF p&#x2f; RIP s&#x2f; Pgto Exer Ant</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Enviados p&#x2f; Ender Im&#xf3;vel</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Enviados p&#x2f; Ender Resp</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Enviados p&#x2f; Ender Esp</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Cancel</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Dispon&#xed;vel</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Susp Lanc</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel com Erro</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel c&#x2f; Resp Inv</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>DARF N&#xe3;o Emit Isento</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>DARF N&#xe3;o Emit Carente</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>DARF N&#xe3;o Emit Valor &#x3c; R&#x24;10</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>DARF N&#xe3;o Emit Ender Inv&#xe1;lido</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>DARF N&#xe3;o Emit Susp Cobr</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Planilha_7B</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>oltp</connection>
+    <sql>SELECT sg_spu &#x22;Sigla da SPU&#x22;, &#xa;       sg_uf &#x22;Sigla da UF&#x22;, &#xa;       nu_mun &#x22;N&#xfa;mero do Munic&#xed;pio&#x22;, &#xa;       no_mun &#x22;Nome do Munic&#xed;pio&#x22;, &#xa;       nu_rip &#x22;N&#xfa;mero do RIP&#x22;, &#xa;       local_ender_registr_imovel &#x22;Local de Endere&#xe7;amento Registrado no Im&#xf3;vel&#x22;, &#xa;       local_ender_emissao_utiliz &#x22;Local de Endere&#xe7;amento Utilizaco&#x22;, &#xa;       tipo_logr_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Tipo de Logrador&#x22;, &#xa;       nome_logr_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Nome do Logrador&#x22;, &#xa;       numero_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado N&#xfa;mero do Logrador&#x22;, &#xa;       complemento_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Complemento&#x22;, &#xa;       nu_lote_imovel_emis_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Lote&#x22;, &#xa;       nu_quadra_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Quadra&#x22;, &#xa;       nu_lote_emiss_utilizado &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Loteamento&#x22;, &#xa;       bairro_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado  Bairro&#x22;, &#xa;       cx_postal_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Caixa Postal&#x22;, &#xa;       nu_cep_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado CEP&#x22;, &#xa;       no_mun_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado Munic&#xed;pio&#x22;, &#xa;       sg_uf_emiss_utiliz &#x22;Endere&#xe7;o de Emiss&#xe3;o Utilizado UF&#x22;, &#xa;       tx_motivo_nao_usa_rfb &#x22;Motivo para n&#xe3;o utilizar o endere&#xe7;o RFB&#x22;&#xa;  FROM grem.planilha_7b&#x3b;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sintetico 3L</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>oltp</connection>
+    <sql>SELECT &#xa;	uf&#xa;	, Dados &#xa;	, SUM&#x28;&#x22;ERRO DE CALCULO&#x22;&#x29; AS &#x22;ERRO DE CALCULO&#x22; &#xa;	, SUM&#x28;&#x22;RESP INVALIDO OU NAO CADASTRADO&#x22;&#x29; AS &#x22;RESP INVALIDO OU NAO CADASTRADO&#x22;&#xa;	, SUM&#x28;&#x22;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x22;&#x29; AS &#x22;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x22;&#xa;	, SUM&#x28;&#x22;SUSP LANC - INCONSISTENCIA CADASTRAL&#x22;&#x29; AS &#x22;SUSP LANC - INCONSISTENCIA CADASTRAL&#x22;&#xa;	, SUM&#x28;&#x22;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x22;&#x29; AS &#x22;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x22;&#xa;	, SUM&#x28;&#x22;SUSP LANC - REGULARIZACAO FUNDIARIA&#x22;&#x29; AS &#x22;SUSP LANC - REGULARIZACAO FUNDIARIA&#x22;&#xa;	, SUM&#x28;&#x22;SUSP LANC - OUTROS MOTIVOS&#x22;&#x29; AS &#x22;SUSP LANC - OUTROS MOTIVOS&#x22;&#xa;	, SUM&#x28;total&#x29; AS total&#xa;FROM&#xa;	&#x28;SELECT&#xa;		uf.uf&#xa;		, &#x27;Valor do D&#xe9;bito&#x27; AS Dados &#xa;		, COALESCE&#x28;tb1.vl_debito,0&#x29; AS &#x22;ERRO DE CALCULO&#x22;&#xa;		, COALESCE&#x28;tb2.vl_debito,0&#x29; AS &#x22;RESP INVALIDO OU NAO CADASTRADO&#x22;&#xa;		, COALESCE&#x28;tb3.vl_debito,0&#x29; AS &#x22;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x22;&#xa;		, COALESCE&#x28;tb4.vl_debito,0&#x29; AS &#x22;SUSP LANC - INCONSISTENCIA CADASTRAL&#x22;&#xa;		, COALESCE&#x28;tb5.vl_debito,0&#x29; AS &#x22;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x22;&#xa;		, COALESCE&#x28;tb6.vl_debito,0&#x29; AS &#x22;SUSP LANC - REGULARIZACAO FUNDIARIA&#x22;&#xa;		, COALESCE&#x28;tb7.vl_debito,0&#x29; AS &#x22;SUSP LANC - OUTROS MOTIVOS&#x22;&#xa;		, SUM&#x28;total.vl_debito&#x29; AS total&#xa;	FROM&#xa;		&#x28;SELECT DISTINCT UF&#xa;		FROM&#xa;			&#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;			      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;			      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;			 FROM grem.planilha_3k&#xa;			 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#xa;						&#x27;ERRO DE CALCULO&#x27;&#xa;						, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;&#xa;						, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;&#xa;						, &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;						, &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;&#xa;						, &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;&#xa;						, &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa;						, &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#x29;&#xa;			 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb&#xa;		 ORDER BY 1&#x29;uf&#xa;		 &#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ERRO DE CALCULO&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb1 ON tb1.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27; AS cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;&#xa;		 GROUP BY uf&#x29;tb2 ON tb2.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb3 ON tb3.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb4 ON tb4.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb5 ON tb5.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb6 ON tb6.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb7 ON tb7.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#xa;						&#x27;ERRO DE CALCULO&#x27;, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;, &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;						, &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;, &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;, &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa; 						, &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#x29;&#xa;		 GROUP BY  uf, cd_motivo_nao_geracao&#x29;total ON total.uf &#x3d; uf.uf&#xa;	GROUP BY uf.uf, tb1.vl_debito, tb2.vl_debito, tb3.vl_debito, tb4.vl_debito, tb5.vl_debito, tb6.vl_debito, tb7.vl_debito&#xa;&#xa;	UNION ALL&#xa;&#xa;	SELECT&#xa;		uf.uf&#xa;		, &#x27;Quantidade de RIP&#x27; AS Dados &#xa;		, COALESCE&#x28;tb1.qdte_rip,0&#x29; AS &#x22;ERRO DE CALCULO&#x22;&#xa;		, COALESCE&#x28;tb2.qdte_rip,0&#x29; AS &#x22;RESP INVALIDO OU NAO CADASTRADO&#x22;&#xa;		, COALESCE&#x28;tb3.qdte_rip,0&#x29; AS &#x22;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x22;&#xa;		, COALESCE&#x28;tb4.qdte_rip,0&#x29; AS &#x22;SUSP LANC - INCONSISTENCIA CADASTRAL&#x22;&#xa;		, COALESCE&#x28;tb5.qdte_rip,0&#x29; AS &#x22;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x22;&#xa;		, COALESCE&#x28;tb6.qdte_rip,0&#x29; AS &#x22;SUSP LANC - REGULARIZACAO FUNDIARIA&#x22;&#xa;		, COALESCE&#x28;tb7.qdte_rip,0&#x29; AS &#x22;SUSP LANC - OUTROS MOTIVOS&#x22;&#xa;		, SUM&#x28;total.qdte_rip&#x29; AS total&#xa;	FROM&#xa;		&#x28;SELECT DISTINCT UF&#xa;		FROM&#xa;			&#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;			      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;			      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;			 FROM grem.planilha_3k&#xa;			 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#xa;							&#x27;ERRO DE CALCULO&#x27;, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;,&#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;, &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;							, &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;, &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;, &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa;							, &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#x29;&#xa;			 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb&#xa;		 ORDER BY 1&#x29;uf&#xa;		 &#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ERRO DE CALCULO&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb1 ON tb1.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27; AS cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;&#xa;		 GROUP BY uf&#x29;tb2 ON tb2.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb3 ON tb3.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb4 ON tb4.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb5 ON tb5.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb6 ON tb6.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb7 ON tb7.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#xa;			&#x27;ERRO DE CALCULO&#x27;, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;, &#x27;RESP INVALIDO OU NAO CADASTRADO&#x27;, &#x27;SUSP LANC - EMENDA CONSTITUCIONAL 46&#x27;&#xa;			, &#x27;SUSP LANC - INCONSISTENCIA CADASTRAL&#x27;, &#x27;SUSP LANC - ISENCAO TAXA - ORGAO ISENTO&#x27;, &#x27;SUSP LANC - REGULARIZACAO FUNDIARIA&#x27;&#xa;			, &#x27;SUSP LANC - OUTROS MOTIVOS&#x27;&#x29;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;total ON total.uf &#x3d; uf.uf&#xa;	GROUP BY uf.uf, tb1.qdte_rip, tb2.qdte_rip, tb3.qdte_rip, tb4.qdte_rip, tb5.qdte_rip, tb6.qdte_rip, tb7.qdte_rip&#x29;tabela&#xa;GROUP BY uf, Dados&#xa;ORDER BY 1,2</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sint&#xe9;tico 3M</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>oltp</connection>
+    <sql>SELECT &#xa;	uf&#xa;	, Dados &#xa;	, SUM&#x28;&#x22;CARENTE&#x22;&#x29; AS &#x22;CARENTE&#x22;&#xa;	, SUM&#x28;&#x22;ERRO DE ENDERECAMENTO&#x22;&#x29; AS &#x22;ERRO DE ENDERECAMENTO&#x22;&#xa;	, SUM&#x28;&#x22;ISENTO&#x22;&#x29; AS &#x22;ISENTO&#x22; &#xa;	, SUM&#x28;&#x22;VALOR &#x3c; R&#x24; 10,00&#x22;&#x29; AS &#x22;VALOR &#x3c; R&#x24; 10,00&#x22;&#xa;	, SUM&#x28;&#x22;SUSPENSAO DE COBRANCA&#x22;&#x29; AS &#x22;SUSPENSAO DE COBRANCA&#x22;&#xa;	, SUM&#x28;total&#x29; AS total&#xa;FROM&#xa;	&#x28;SELECT&#xa;		uf.uf&#xa;		, &#x27;Valor do D&#xe9;bito&#x27; AS Dados &#xa;		, COALESCE&#x28;tb1.vl_debito,0&#x29; AS &#x22;CARENTE&#x22;&#xa;		, COALESCE&#x28;tb2.vl_debito,0&#x29; AS &#x22;ERRO DE ENDERECAMENTO&#x22;&#xa;		, COALESCE&#x28;tb3.vl_debito,0&#x29; AS &#x22;ISENTO&#x22;&#xa;		, COALESCE&#x28;tb4.vl_debito,0&#x29; AS &#x22;VALOR &#x3c; R&#x24; 10,00&#x22;&#xa;		, COALESCE&#x28;tb5.vl_debito,0&#x29; AS &#x22;SUSPENSAO DE COBRANCA&#x22;&#xa;		, SUM&#x28;total.vl_debito&#x29; AS total&#xa;	FROM&#xa;		&#x28;SELECT DISTINCT UF&#xa;		   FROM &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;			        COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;			        sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;			   FROM grem.planilha_3k&#xa;			  WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#x27;ISENTO&#x27;, &#x27;CARENTE&#x27;, &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;, &#x27;ERRO DE ENDERECAMENTO&#x27;,&#x27;SUSPENSAO DE COBRANCA&#x27;&#x29;&#xa;			  GROUP BY uf, cd_motivo_nao_geracao&#x29;tb&#xa;		    ORDER BY 1&#x29;uf&#xa;		 &#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;CARENTE&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb1 ON tb1.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, &#x27;ERRO DE ENDERECAMENTO&#x27; AS cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ERRO DE ENDERECAMENTO&#x27;&#xa;		 GROUP BY uf&#x29;tb2 ON tb2.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ISENTO&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb3 ON tb3.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb4 ON tb4.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao, COUNT&#x28;nu_rip&#x29; qdte_rip, sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		             FROM grem.planilha_3k&#xa;		            WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSPENSAO DE COBRANCA&#x27;&#xa;		            GROUP BY uf, cd_motivo_nao_geracao&#x29;tb5 ON tb5.uf &#x3d; uf.uf&#xa;&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao, COUNT&#x28;nu_rip&#x29; qdte_rip, sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		              FROM grem.planilha_3k&#xa;		             WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#x27;ISENTO&#x27;, &#x27;CARENTE&#x27;, &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;, &#x27;ERRO DE ENDERECAMENTO&#x27;,&#xa;		                                                    &#x27;SUSPENSAO DE COBRANCA&#x27;&#x29;&#xa;		         GROUP BY  uf, cd_motivo_nao_geracao&#x29;total ON total.uf &#x3d; uf.uf&#xa;	GROUP BY uf.uf, tb1.vl_debito, tb2.vl_debito, tb3.vl_debito, tb4.vl_debito, tb5.vl_debito&#xa;&#xa;	UNION ALL&#xa;&#xa;	SELECT&#xa;		uf.uf&#xa;		, &#x27;Quantidade de RIP&#x27; AS Dados &#xa;		, COALESCE&#x28;tb1.qdte_rip,0&#x29; AS &#x22;CARENTE&#x22;&#xa;		, COALESCE&#x28;tb2.qdte_rip,0&#x29; AS &#x22;ERRO DE ENDERECAMENTO&#x22;&#xa;		, COALESCE&#x28;tb3.qdte_rip,0&#x29; AS &#x22;ISENTO&#x22;&#xa;		, COALESCE&#x28;tb4.qdte_rip,0&#x29; AS &#x22;VALOR &#x3c; R&#x24; 10,00&#x22;&#xa;		, COALESCE&#x28;tb5.qdte_rip,0&#x29; AS &#x22;SUSPENSAO DE COBRANCA&#x22;&#xa;		, SUM&#x28;total.qdte_rip&#x29; AS total&#xa;	FROM&#xa;		&#x28;SELECT DISTINCT UF&#xa;		FROM&#xa;			&#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;			      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;			      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;			 FROM grem.planilha_3k&#xa;			 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#x27;ISENTO&#x27;, &#x27;CARENTE&#x27;, &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;, &#x27;ERRO DE ENDERECAMENTO&#x27;,&#x27;SUSPENSAO DE COBRANCA&#x27;&#x29;&#xa;			 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb&#xa;		 ORDER BY 1&#x29;uf&#xa;		 &#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;CARENTE&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb1 ON tb1.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, &#x27;ERRO DE ENDERECAMENTO&#x27; AS cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ERRO DE ENDERECAMENTO&#x27;&#xa;		 GROUP BY uf&#x29;tb2 ON tb2.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao, COUNT&#x28;nu_rip&#x29; qdte_rip, sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		             FROM grem.planilha_3k&#xa;		            WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;ISENTO&#x27;&#xa;		            GROUP BY uf, cd_motivo_nao_geracao&#x29;tb3 ON tb3.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb4 ON tb4.uf &#x3d; uf.uf&#xa;&#xa;		LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; &#x3d; &#x27;SUSPENSAO DE COBRANCA&#x27;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;tb5 ON tb5.uf &#x3d; uf.uf&#xa;&#xa;		 LEFT JOIN &#x28;SELECT uf, cd_motivo_nao_geracao,  &#xa;		      COUNT&#x28;nu_rip&#x29; qdte_rip,&#xa;		      sum&#x28;cast&#x28;vl_debito as numeric&#x28;17,2&#x29;&#x29;&#x2f;100&#x29; as vl_debito&#xa;		 FROM grem.planilha_3k&#xa;		 WHERE rtrim&#x28;cd_motivo_nao_geracao&#x29; IN &#x28;&#x27;ISENTO&#x27;, &#x27;CARENTE&#x27;, &#x27;VALOR &#x3c; R&#x24; 10,00&#x27;, &#x27;ERRO DE ENDERECAMENTO&#x27;,&#x27;SUSPENSAO DE COBRANCA&#x27;&#x29;&#xa;		 GROUP BY uf, cd_motivo_nao_geracao&#x29;total ON total.uf &#x3d; uf.uf&#xa;	GROUP BY uf.uf, tb1.qdte_rip, tb2.qdte_rip, tb3.qdte_rip, tb4.qdte_rip, tb5.qdte_rip&#x29;tabela&#xa;GROUP BY uf, Dados&#xa;ORDER BY 1,2</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Text file output</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>&#x2f;home&#x2f;clauber&#x2f;GrandeEmissao2016&#x2f;Relatorios&#x2f;ANALITICO_PREV_9999_2016043MXD_RelacaoDeImoveisComDebitosNaoCobrados</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>SPU</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>30</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>UF</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>2</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Munic&#xed;pio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Nr. RIP</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>13</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Nr. Utiliza&#xe7;&#xe3;o</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>3</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Cd. Receita</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>4</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Vlr. D&#xe9;bito</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>17</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Cd. Motivo N&#xe3;o Gera&#xe7;&#xe3;o</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>tx_explicacao_nao_geracao</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>100</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>cpf_cgc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>18</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>nome</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>55</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>planilha_z4</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>oltp</connection>
+    <sql>SELECT sg_uf  &#x22;Unidade da Federa&#xe7;&#xe3;o&#x22;, &#xa;       sg_spu &#x22;SPU&#x22;, &#xa;       cast&#x28;qt_darf_postado as integer&#x29; &#x22;Qt DARF Postados&#x22;, &#xa;       cast&#x28;sem_pgto as integer&#x29; &#x22;Qt DARF p&#x2f; RIP s&#x2f; Pgto Exer Ant&#x22;, &#xa;       cast&#x28;imov  as integer&#x29; &#x22;Enviados p&#x2f; Ender Im&#xf3;vel&#x22;,&#xa;       cast&#x28;resp  as integer&#x29; &#x22;Enviados p&#x2f; Ender Resp&#x22;, &#xa;       cast&#x28;end_resp as integer&#x29; &#x22;Enviados p&#x2f; Ender Esp&#x22;, &#xa;       cast&#x28;cancelados as integer&#x29; &#x22;Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Cancel&#x22;, &#xa;       cast&#x28;vagos as integer&#x29; &#x22;Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Dispon&#xed;vel&#x22;, &#xa;       cast&#x28;susp_lanc as integer&#x29; &#x22;Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel Susp Lanc&#x22;, &#xa;       cast&#x28;erro  as integer&#x29; &#x22;Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel com Erro&#x22;, &#xa;       cast&#x28;resp_inv  as integer&#x29; &#x22;Sem Gera&#xe7;&#xe3;o Deb Im&#xf3;vel c&#x2f; Resp Inv&#x22;, &#xa;       cast&#x28;isento  as integer&#x29; &#x22;DARF N&#xe3;o Emit Isento&#x22;, &#xa;       cast&#x28;carente as integer&#x29; &#x22;DARF N&#xe3;o Emit Carente&#x22;, &#xa;       cast&#x28;menor_10 as integer&#x29; &#x22;DARF N&#xe3;o Emit Valor &#x3c; R&#x24;10&#x22;, &#xa;       cast&#x28;end_inv as integer&#x29; &#x22;DARF N&#xe3;o Emit Ender Inv&#xe1;lido&#x22;, &#xa;       cast&#x28;susp_cobr as integer&#x29; &#x22;DARF N&#xe3;o Emit Susp Cobr&#x22;&#xa;  FROM grem.planilha_z4&#x3b;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>s_planilha_7b</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>&#x2f;home&#x2f;clauber&#x2f;GrandeEmissao2016&#x2f;Relatorios&#x2f;PREV_9999_2016037BXD_RelacaoDeImoveisComDARFparaEnderecoNaoObtidoNaRFB</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>Sigla da SPU</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>30</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Sigla da UF</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>2</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>N&#xfa;mero do Munic&#xed;pio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>4</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Nome do Munic&#xed;pio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>N&#xfa;mero do RIP</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>13</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Local de Endere&#xe7;amento Registrado no Im&#xf3;vel</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>25</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Local de Endere&#xe7;amento Utilizaco</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>25</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Tipo de Logrador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>4</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Nome do Logrador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado N&#xfa;mero do Logrador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>5</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Complemento</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Lote</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>4</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Quadra</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>3</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Loteamento</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>5</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado  Bairro</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>20</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Caixa Postal</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>6</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado CEP</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>8</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado Munic&#xed;pio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Endere&#xe7;o de Emiss&#xe3;o Utilizado UF</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>2</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Motivo para n&#xe3;o utilizar o endere&#xe7;o RFB</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>34</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
